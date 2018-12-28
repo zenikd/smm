@@ -1,7 +1,9 @@
 package by.ez.smm.dal.orm;
 
-public interface AbstractDal<T>
+import by.ez.smm.dal.orm.filter.AbstractFilter;
+
+public interface AbstractDal<ENTITY, FILTER>
 {
-	void save(T entity);
-	T findOne();
+	void save(ENTITY entity);
+	ENTITY find(FILTER filter);
 }
