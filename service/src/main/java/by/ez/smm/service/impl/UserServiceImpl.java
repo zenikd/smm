@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import by.ez.smm.dal.orm.UserDal;
 import by.ez.smm.dal.orm.entity.User;
+import by.ez.smm.dal.orm.filter.UserFilter;
 import by.ez.smm.service.UserService;
 
 @Service
@@ -18,9 +19,9 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
 
 	}
 
-	public User findOne()
+	public User find()
 	{
 
-		return userDal.findOne();
+		return userDal.find(new UserFilter());
 	}
 }

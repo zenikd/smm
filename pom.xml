@@ -16,6 +16,7 @@
 		<jersey.version>2.7</jersey.version>
 		<jackson.jaxrs.json.provider.version>2.6.2</jackson.jaxrs.json.provider.version>
 		<urlrewritefilter.version>4.0.3</urlrewritefilter.version>
+		<spring.security.version>4.0.1.RELEASE</spring.security.version>
 	</properties>
 
 	<modules>
@@ -128,6 +129,19 @@
 				<artifactId>urlrewritefilter</artifactId>
 				<version>${urlrewritefilter.version}</version>
 			</dependency>
+
+			<!-- Spring security -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 

@@ -24,6 +24,6 @@ public class UserController extends AbstractController
 	public Response getCurrentUser()
 	{
 
-		return Response.ok(userService.findOne()).build();
+		return Response.ok(userService.find()).build();
 	}
 }

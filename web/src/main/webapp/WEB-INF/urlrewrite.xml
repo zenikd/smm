@@ -4,6 +4,6 @@
 <urlrewrite>
 	<rule>
 		<from>^/$</from>
-		<to>/angular/index.html</to>
+		<to>/index.html</to>
 	</rule>
 </urlrewrite>

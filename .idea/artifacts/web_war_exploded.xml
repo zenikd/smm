@@ -65,6 +65,10 @@
           <element id="library" level="project" name="Maven: junit:junit:4.3.1" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2:spring-bridge:2.2.0" />
           <element id="library" level="project" name="Maven: org.tuckey:urlrewritefilter:4.0.3" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.0.1.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">

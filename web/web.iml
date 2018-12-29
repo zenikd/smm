@@ -77,5 +77,9 @@
     <orderEntry type="library" name="Maven: junit:junit:4.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:spring-bridge:2.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.tuckey:urlrewritefilter:4.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:4.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:4.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:4.0.1.RELEASE" level="project" />
   </component>
 </module>
