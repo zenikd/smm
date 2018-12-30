@@ -12,7 +12,7 @@ import by.ez.smm.service.UserService;
 import by.ez.smm.service.impl.UserServiceImpl;
 
 @Controller
-@Path("/cafe")
+@Path("/user")
 public class UserController extends AbstractController
 {
 	@Autowired
@@ -20,7 +20,6 @@ public class UserController extends AbstractController
 
 	@GET
 	@Path("/get")
-
 	public Response getCurrentUser()
 	{
 
