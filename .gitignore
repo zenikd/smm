@@ -14,8 +14,8 @@ service/src/test/resources/jdbc.properties
 
 
 
-dao-orm-impl/target
-dao-orm-impl/.classpath
+dao/target
+dao/.classpath
 ./web/target/
 service/target/
 

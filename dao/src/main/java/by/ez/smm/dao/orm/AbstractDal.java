@@ -1,6 +1,4 @@
-package by.ez.smm.dal.orm;
-
-import by.ez.smm.dal.orm.filter.AbstractFilter;
+package by.ez.smm.dao.orm;
 
 public interface AbstractDal<ENTITY, FILTER>
 {

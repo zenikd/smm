@@ -20,7 +20,7 @@
 	</properties>
 
 	<modules>
-		<module>dal</module>
+		<module>dao</module>
 		<module>service</module>
 		<module>web</module>
 	</modules>

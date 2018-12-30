@@ -1,11 +1,9 @@
-package by.ez.smm.dal.orm.impl;
+package by.ez.smm.dao.orm.impl;
 import org.springframework.stereotype.Repository;
 
-import by.ez.smm.dal.orm.AbstractDal;
-import by.ez.smm.dal.orm.UserDal;
-import by.ez.smm.dal.orm.entity.User;
-import by.ez.smm.dal.orm.filter.AbstractFilter;
-import by.ez.smm.dal.orm.filter.UserFilter;
+import by.ez.smm.dao.orm.UserDal;
+import by.ez.smm.dao.orm.entity.User;
+import by.ez.smm.dao.orm.filter.UserFilter;
 
 @Repository
 public class UserDalImpl extends AbstractDalImpl<User, UserFilter> implements UserDal

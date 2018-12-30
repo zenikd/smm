@@ -1,4 +1,4 @@
-package by.ez.smm.dal.orm.entity;
+package by.ez.smm.dao.orm.entity;
 
 public class User extends BaseEntity
 {

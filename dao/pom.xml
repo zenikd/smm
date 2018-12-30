@@ -9,7 +9,7 @@
 		<artifactId>root</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<artifactId>dal</artifactId>
+	<artifactId>dao</artifactId>
 
 	<dependencies>
 		<!-- Spring-->

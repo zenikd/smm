@@ -3,9 +3,9 @@ package by.ez.smm.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import by.ez.smm.dal.orm.UserDal;
-import by.ez.smm.dal.orm.entity.User;
-import by.ez.smm.dal.orm.filter.UserFilter;
+import by.ez.smm.dao.orm.UserDal;
+import by.ez.smm.dao.orm.entity.User;
+import by.ez.smm.dao.orm.filter.UserFilter;
 import by.ez.smm.service.UserService;
 
 @Service

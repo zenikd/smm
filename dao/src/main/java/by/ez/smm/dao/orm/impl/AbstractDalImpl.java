@@ -1,6 +1,6 @@
-package by.ez.smm.dal.orm.impl;
+package by.ez.smm.dao.orm.impl;
 
-import by.ez.smm.dal.orm.AbstractDal;
+import by.ez.smm.dao.orm.AbstractDal;
 
 public abstract class AbstractDalImpl<ENTITY, FILTER> implements AbstractDal<ENTITY, FILTER>
 {
