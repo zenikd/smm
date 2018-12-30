@@ -1,6 +1,6 @@
 package by.ez.smm.dal.orm.entity;
 
-public class User extends AbstractEntity
+public class User extends BaseEntity
 {
 	private String name;
 

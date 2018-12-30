@@ -1,6 +1,7 @@
 package by.ez.smm.dal.orm.entity;
 
-public class AbstractEntity
+@MappedSuperclass
+public class BaseEntity
 {
 	private int id;
 
