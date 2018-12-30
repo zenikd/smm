@@ -1,10 +1,5 @@
 .settings/
-dao-api/.classpath
-dao-api/.project
 .project
-dao-jdbc-impl/.classpath
-service/.classpath
-web/.classpath
 .idea
 *.iml
 .metadata/
@@ -12,10 +7,9 @@ web/src/main/resources/jdbc.properties
 service/src/test/resources/jdbc-test.properties
 service/src/test/resources/jdbc.properties
 
-
-
 dao/target
 dao/.classpath
-./web/target/
-service/target/
-
+web/target/
+web/.classpath
+service/target
+service/.classpath
