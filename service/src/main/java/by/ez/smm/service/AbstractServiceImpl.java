@@ -1,7 +1,8 @@
 package by.ez.smm.service;
 
-public interface AbstractServiceImpl<T>
+public interface AbstractServiceImpl<ENTITY, ID>
 {
-	public void save(T entity);
-	public T find();
+	public void save(ENTITY entity);
+	public ENTITY find();
+	public ENTITY getById(ID id);
 }

@@ -15,7 +15,7 @@
 		<!-- Module dependency -->
 		<dependency>
 			<groupId>by.ez.smm</groupId>
-			<artifactId>dal</artifactId>
+			<artifactId>dao</artifactId>
 		</dependency>
 		<!-- Spring-->
 		<dependency>

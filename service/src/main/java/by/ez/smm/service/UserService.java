@@ -1,6 +1,8 @@
 package by.ez.smm.service;
 
-public interface UserService<T> extends AbstractServiceImpl<T>
+import by.ez.smm.dao.orm.entity.Users;
+
+public interface UserService extends AbstractServiceImpl<Users, Integer>
 {
 
 }

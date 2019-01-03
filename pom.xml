@@ -31,7 +31,7 @@
 			<!-- Module dependency -->
 			<dependency>
 				<groupId>by.ez.smm</groupId>
-				<artifactId>dal</artifactId>
+				<artifactId>dao</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 			<dependency>
@@ -158,6 +158,19 @@
 				<artifactId>hibernate-jpamodelgen</artifactId>
 				<version>4.3.4.Final</version>
 				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>1.4</version>
+			</dependency>
+
+			<!--Postfresql-->
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>9.4-1200-jdbc41</version>
 			</dependency>
 
 		</dependencies>

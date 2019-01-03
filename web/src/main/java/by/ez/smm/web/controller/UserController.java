@@ -20,6 +20,6 @@ public class UserController extends AbstractController
 	public Response getCurrentUser()
 	{
 
-		return Response.ok(userService.find()).build();
+		return Response.ok(userService.getById(1)).build();
 	}
 }
