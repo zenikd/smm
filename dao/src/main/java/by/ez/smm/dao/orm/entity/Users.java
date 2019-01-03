@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema = "public")
 public class Users extends BaseEntity
 {
 	@Column

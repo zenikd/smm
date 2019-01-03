@@ -1,8 +1,8 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
       http://www.springframework.org/schema/beans 
       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
       http://www.springframework.org/schema/tx 
@@ -10,23 +10,31 @@
       http://www.springframework.org/schema/context 
       http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-	<context:component-scan base-package="by.ez.smm.dao" />
+	<context:component-scan base-package="by.ez.smm.dao"/>
 
 	<context:property-placeholder ignore-unresolvable="false"
-	                              location="classpath:smm.properties" />
+	                              location="classpath:smm.properties"/>
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 	      destroy-method="close" p:driverClassName="org.postgresql.Driver"
 	      p:url="${db.url}" p:username="${db.user}"
-	      p:password="${db.password}" />
+	      p:password="${db.password}"/>
 
 
 	<bean id="entityManagerFactory"
 	      class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-	      p:dataSource-ref="dataSource" />
+	      p:dataSource-ref="dataSource">
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.default_schema">public</prop>
+			</props>
+		</property>
+	</bean>
 
-	<tx:annotation-driven />
+	<tx:annotation-driven/>
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
-	      p:entityManagerFactory-ref="entityManagerFactory" />
+	      p:entityManagerFactory-ref="entityManagerFactory"/>
 
 </beans>
