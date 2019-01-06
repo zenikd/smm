@@ -3,7 +3,6 @@ package by.ez.smm.web.controller;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
@@ -19,6 +18,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 
 import by.ez.smm.web.security.dto.TokenDto;
+import by.ez.smm.web.security.util.TokenUtils;
 
 @Controller
 @Path("/auth")
@@ -31,6 +31,9 @@ public class AuthController
 	@Autowired
 	@Qualifier("authenticationManager")
 	private AuthenticationManager authenticationManager;
+
+	@Autowired
+	private TokenUtils tokenUtils;
 
 	@Autowired
 	private UserDetailsService userDetailsService;
@@ -46,7 +49,7 @@ public class AuthController
 		password = "Evgeni";
 
 		String token = authenticate(username, password);
-		String csrfToken = "asdasdas";
+		String csrfToken = tokenUtils.generateCsrfToken();
 		response.addCookie(createCookie(AUTH_COOKIE_NAME, token, false, true));
 		response.addCookie(createCookie(CSRF_COOKIE_NAME, csrfToken, false, false));
 		return new TokenDto(token, csrfToken);
@@ -75,7 +78,7 @@ public class AuthController
 		 * password is needed for token generation
 		 */
 		UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-		return "hello";
+		return tokenUtils.createToken(userDetails, 10000000l);
 	}
 
 	private Cookie createCookie(String name, String value, boolean secure, boolean http)

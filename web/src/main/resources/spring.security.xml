@@ -13,7 +13,7 @@
 
 	<security:http
 			entry-point-ref="unauthorizedEntryPoint">
-		<security:intercept-url pattern="/smm/aaaaa.*" access="isAuthenticated()"/>
+		<security:intercept-url pattern="/smm/.*" access="isAuthenticated()"/>
 
 		<security:logout logout-url="/logout" logout-success-url="/"/>
 	</security:http>
