@@ -8,15 +8,19 @@
 
 
 	<security:authentication-manager id="authenticationManager">
-		<security:authentication-provider ref="authProvider"/>
+		<security:authentication-provider ref="authenticationProvider"/>
 	</security:authentication-manager>
 
-	<security:http>
-		<security:intercept-url pattern="/services/api/.*" access="isAuthenticated()"/>
+	<security:http
+			entry-point-ref="unauthorizedEntryPoint">
+		<security:intercept-url pattern="/smm/aaaaa.*" access="isAuthenticated()"/>
 
 		<security:logout logout-url="/logout" logout-success-url="/"/>
 	</security:http>
 
-	<bean id="authProvider" class="by.ez.smm.web.security.provider.AuthProvider"/>
+	<bean id="authenticationProvider" class="by.ez.smm.web.security.provider.ExtendedAuthProvider">
+		<property name="userDetailsService" ref="userDetailsService"/>
+	</bean>
+
 
 </beans>

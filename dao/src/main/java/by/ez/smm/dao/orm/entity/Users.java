@@ -10,6 +10,13 @@ public class Users extends BaseEntity
 	@Column
 	private String name;
 
+	@Column
+	private String pass;
+
+	public String getPass(){return pass;}
+
+	public void setPass(String pass){this.pass = pass;}
+
 	public String getName()
 	{
 		return name;

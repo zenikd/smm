@@ -14,6 +14,7 @@
 
 
 	<import resource="classpath:service-context.xml"/>
+	<import resource="classpath:spring.security.xml"/>
 
 	<context:component-scan base-package="by.ez.smm.web"/>
 

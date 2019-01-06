@@ -1,8 +1,10 @@
 package by.ez.smm.service;
 
-public interface AbstractServiceImpl<ENTITY, ID>
+import java.util.List;
+
+public interface AbstractServiceImpl<ENTITY, ID, FILTER>
 {
 	public void save(ENTITY entity);
-	public ENTITY find();
+	public List<ENTITY> find(FILTER filter);
 	public ENTITY getById(ID id);
 }

@@ -1,5 +1,7 @@
 package by.ez.smm.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +11,7 @@ import by.ez.smm.dao.orm.filter.UserFilter;
 import by.ez.smm.service.UserService;
 
 @Service
-public class UserServiceImpl extends AbstractService<Users, Integer> implements UserService
+public class UserServiceImpl extends AbstractService<Users, Integer, UserFilter> implements UserService
 {
 	@Autowired
 	UserDao userDal;
@@ -25,9 +27,9 @@ public class UserServiceImpl extends AbstractService<Users, Integer> implements 
 
 	}
 
-	public Users find()
+	@Override
+	public List<Users> find(UserFilter userFilter)
 	{
-
-		return userDal.find(new UserFilter());
+		return userDal.find(userFilter);
 	}
 }

@@ -17,6 +17,9 @@
 		<jackson.jaxrs.json.provider.version>2.6.2</jackson.jaxrs.json.provider.version>
 		<urlrewritefilter.version>4.0.3</urlrewritefilter.version>
 		<spring.security.version>4.0.1.RELEASE</spring.security.version>
+		<log4j.version>2.5</log4j.version>
+		<google.proximity>v1beta1-rev26-1.23.0</google.proximity>
+		<javax.servlet-api.version>3.0.1</javax.servlet-api.version>
 	</properties>
 
 	<modules>
@@ -43,6 +46,23 @@
 				<groupId>by.ez.smm</groupId>
 				<artifactId>ui</artifactId>
 				<version>1.0.0</version>
+			</dependency>
+
+			<!--LOG4J-->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-web</artifactId>
+				<version>${log4j.version}</version>
 			</dependency>
 
 			<!-- Spring -->
@@ -171,6 +191,20 @@
 				<groupId>org.postgresql</groupId>
 				<artifactId>postgresql</artifactId>
 				<version>9.4-1200-jdbc41</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.apis</groupId>
+				<artifactId>google-api-services-proximitybeacon</artifactId>
+				<version>${google.proximity}</version>
+			</dependency>
+
+			<!--Javax-->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${javax.servlet-api.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 		</dependencies>
