@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-public class Users extends BaseEntity
+@Table(name = "user_info")
+public class User extends BaseEntity
 {
 	@Column
 	private String name;
