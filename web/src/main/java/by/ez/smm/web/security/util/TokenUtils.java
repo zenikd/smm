@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import by.ez.smm.web.security.exception.AuthInternalException;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -32,11 +33,6 @@ public class TokenUtils
 
 	public String getUserNameFromToken(String authToken)
 	{
-		if (null == authToken)
-		{
-			return null;
-		}
-
 		try
 		{
 			return Jwts.parser()
@@ -47,7 +43,7 @@ public class TokenUtils
 		}
 		catch (JwtException e)
 		{
-			return null;
+			throw new AuthInternalException("JWT exception", e);
 		}
 	}
 

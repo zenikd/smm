@@ -12,8 +12,21 @@
 	</security:authentication-manager>
 
 	<security:http
-			entry-point-ref="unauthorizedEntryPoint">
-		<security:intercept-url pattern="/smm/.*" access="isAuthenticated()"/>
+			realm="Protected API"
+			use-expressions="true"
+			auto-config="false"
+			create-session="stateless"
+			entry-point-ref="unauthorizedEntryPoint"
+			authentication-manager-ref="authenticationManager"
+			request-matcher="regex"
+			disable-url-rewriting="false">
+		<security:csrf disabled="true"/>
+		<security:custom-filter ref="authenticationTokenProcessingFilter" position="FORM_LOGIN_FILTER"/>
+
+		<!--Auth-->
+		<security:intercept-url pattern="/rest/auth/auth" access="permitAll()"/>
+
+		<security:intercept-url pattern="/rest/.*" access="isAuthenticated()"/>
 
 		<security:logout logout-url="/logout" logout-success-url="/"/>
 	</security:http>
@@ -22,5 +35,8 @@
 		<property name="userDetailsService" ref="userDetailsService"/>
 	</bean>
 
+	<bean id="authenticationTokenProcessingFilter" class="by.ez.smm.web.security.filter.AuthTokenFilter">
+		<constructor-arg ref="userDetailsService"/>
+	</bean>
 
 </beans>
